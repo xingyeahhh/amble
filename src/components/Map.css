@@ -1,0 +1,848 @@
+.marker-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.marker-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* .sidebar {
+  background-color: rgba(35, 55, 75, 0.9);
+  color: #fff;
+  padding: 6px 12px;
+  font-family: monospace;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  border-radius: 4px;
+} */
+
+.marker {
+  background-color: #449e48;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 0px solid #fff;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin: 10px;
+  padding: 0.5rem;
+}
+
+.popup-content {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.mapboxgl-popup h3 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.mapboxgl-popup p {
+  margin-top: 2px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  color: black;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  text-align: left;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.user-input {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 380px;
+  /* background: #99ddff; */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 0px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* border: 1px solid #000; */
+  padding-top: 45px;
+  ;
+  align-items: center;
+}
+
+.titlebox {
+  background-color: #00684a;
+  height: 2.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+
+.text_bar-mapfunction {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: normal;
+  /* padding-left: 24px; */
+  margin-left: 24px;
+  font-family: "Arial", sans-serif;
+}
+
+
+
+.plansetting {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.plansetting-text-web {
+  display: flex;
+  width: 250px;
+  height: 2.5rem;
+  line-height: 40px;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #E3FCF7;
+  border: 1.5px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  justify-content: center;
+  align-items: center;
+  background: #014e3d;
+  cursor: pointer;
+  
+}
+
+.plansetting-text-web span {
+  position: relative;
+  z-index: 2;
+}
+
+.plansetting-text-web:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00ed64;
+  transition: all .35s;
+}
+
+.plansetting-text-web:hover {
+  color: #014e3d;
+ 
+}
+
+.plansetting-text-web:hover:after {
+  width: 100%;
+}
+
+
+
+.detail-text {
+  font-weight: 400;
+  color: #00684a;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.preference-box{
+  z-index: 10;
+}
+
+
+.detailbox {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 26px;
+  left: 30px;
+  width: 380px;
+  /* background: #99ddff; */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 0px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* border: 1px solid #000; */
+  padding-top: 45px;
+  /* height:90%; */
+  align-items: center;
+}
+
+.detail-titlebox {
+  background-color: #00684a;
+  height: 2.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+
+.text_bar-mapfunction-detail {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: normal;
+  /* padding-left: 24px; */
+  margin-left: 24px;
+  font-family: "Arial", sans-serif;
+}
+
+
+
+.finishdetail {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.finishdetail-text {
+  display: flex;
+  width: 250px;
+  height: 2.5rem;
+  line-height: 40px;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #E3FCF7;
+  border: 1.5px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  justify-content: center;
+  align-items: center;
+  background: #014e3d;
+  cursor: pointer;
+}
+
+.finishdetail-text span {
+  position: relative;
+  z-index: 2;
+}
+
+.finishdetail-text:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ffc010;
+  transition: all .35s;
+}
+
+.finishdetail-text:hover {
+  color: #014e3d;
+}
+
+.finishdetail-text:hover:after {
+  width: 100%;
+}
+
+
+.directionbox {
+  color: rgb(0, 0, 0);
+  position: relative;
+  /* top: 26px;
+  left: 30px; */
+  width: 94%;
+  background: #ffffff;
+  border-radius: 0px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 45px;
+  align-items: center;
+  border-width: 0px 1.5px 1.5px 1.5px;
+  border-style: solid;
+  border-color: #ffeea9;
+  overflow: hidden;
+}
+
+
+
+.directionbox-titlebox {
+  background-color: #ffc010;
+  height: 2.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.directiondetail {
+  height: 340px;
+  /* Set the fixed height you desire */
+  overflow-y: auto;
+  /* Add a scrollbar when content exceeds the height */
+  position: relative;
+  padding-right: 25px;
+}
+
+.directionswords {
+  width: 110%;
+  left: -25px;
+  position: relative;
+}
+
+.bold-step {
+  font-weight: bold;
+}
+
+.text_bar-mapfunction-detail-2 {
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  font-weight: normal;
+  /* padding-left: 24px; */
+  margin-left: 24px;
+  font-family: "Arial", sans-serif;
+}
+
+.alien-robot {
+  right: 0;
+  top: 70%;
+  height: 100px;
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+
+}
+
+
+
+
+.alienchatbox {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  /* top: 56px;
+  left: 420px; */
+  right: 30px;
+  top: 110px;
+  width: 320px;
+  height: 60%;
+  /* background: #99ddff; */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 0px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* border: 1px solid #000; */
+  padding-top: 45px;
+  /* height:90%; */
+  align-items: center;
+}
+
+.chat-titlebox {
+  background-color: #00684a;
+  height: 2.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+
+
+
+.text_bar-mapfunction-chat {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: normal;
+  /* padding-left: 24px; */
+  margin-left: 24px;
+  font-family: "Arial", sans-serif;
+}
+
+
+.additional-block-close-chatbox {
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: #00684a;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* animation: fadeIn 0.4s ease-in-out forwards;
+  animation-delay: 0.2s; */
+  cursor: pointer;
+}
+
+.chat-robot-two {
+  z-index: 100;
+  height: 60px;
+  top: -48px;
+  left: 160px;
+  display: flex;
+  position: absolute;
+}
+
+.text_bar_2-detail {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: normal;
+  /* padding-left: 24px; */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.additional-block-datail-button-web {
+  width: 15rem;
+  height: 2.8rem;
+  background-color: #014e3d;
+  right: 8.4rem;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/* Styles for hover state */
+.additional-block-datail-button-web:hover {
+  background-color: #ffe212;
+  /* Change the background color to red on hover */
+}
+
+.additional-block-datail-button:hover .text_bar_2-detail {
+  color: #014e3d;
+}
+
+
+
+.ratewin {
+  width: 100%;
+  height: 53.2rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  background-color: #ffffff;
+  z-index: 1001;
+  flex-direction: column;
+
+}
+
+.ratewin-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 添加此属性以适应ratewin */
+}
+
+.white-board {
+  width: 1rem;
+  height: 100rem;
+  background-color: #ffffff;
+}
+
+.additional-blocks-ratewin {
+  position: absolute;
+  background-color: #dde87b;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-start;
+  z-index: 2000;
+
+}
+
+.text_bar_2-ratewin {
+  color: #001e2b;
+  font-size: 0.9rem;
+  font-weight: normal;
+  /* padding-left: 24px; */
+  justify-content: center;
+  align-items: center;
+
+}
+
+.additional-block-text-ratewin {
+  width: 14rem;
+  height: 2.8rem;
+  background-color: #ffeea9;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.additional-block-close-ratewin {
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: #014e3d;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 500;
+}
+
+
+
+.additional-block-rate-button {
+  width: 18rem;
+  height: 2.8rem;
+  background-color: #014e3d;
+  right: 0;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+  cursor: pointer;
+}
+
+/* Styles for hover state */
+.additional-block-rate-button:hover {
+  background-color: #ffe212;
+  /* Change the background color to red on hover */
+}
+
+
+.additional-block-close-ratewin:hover {
+  background-color: #ffc101;
+}
+
+
+.text_bar_2-detailtitle {
+  color: #001e2b;
+  font-size: 0.9rem;
+  font-weight: normal;
+  /* padding-left: 24px; */
+  justify-content: center;
+  align-items: center;
+
+}
+
+.additional-block-text-detailtitle-web {
+  width: 15rem;
+  height: 2.8rem;
+  background-color: #ffeea9;
+  right: 23.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 5;
+}
+
+.General-rate-inform {
+  width: 100%;
+  height: 37rem;
+  z-index: 300;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding-top: 12%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.like-rate {
+  position: relative;
+  display: flex;
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  /* 左右两端对齐 */
+  align-items: center;
+  /* 垂直居中对齐 */
+}
+
+.stop-text {
+  font-weight: bold;
+  font-size: 22px;
+  text-align: left;
+  /* 将文字左对齐 */
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px white;
+}
+
+.each-stop-inform {
+  display: flex;
+  /* justify-content: center; */
+  padding-top: 1%;
+  width: 100%;
+  overflow: auto;
+  max-height: 90vh;
+  flex-flow: row wrap;
+  align-items: normal;
+}
+
+
+
+
+.finishrate {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: -210px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.finishrate-text {
+  display: flex;
+  width: 500px;
+  height: 2.5rem;
+  line-height: 40px;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #E3FCF7;
+  border: 1.5px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  justify-content: center;
+  align-items: center;
+  background: #014e3d;
+  cursor: pointer;
+}
+
+.finishrate-text span {
+  position: relative;
+  z-index: 2;
+}
+
+.finishrate-text:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #b1ff05;
+  transition: all .35s;
+}
+
+.finishrate-text:hover {
+  color: #014e3d;
+}
+
+.finishrate-text:hover:after {
+  width: 100%;
+}
+
+.mapboxgl-popup-close-button {
+  background-color: #00684a !important;
+}
+
+.mapboxgl-popup-close-button:hover {
+  background-color: #014e3d !important;
+  transition: 0.2;
+}
+
+/* Heatmap Checkboxes */
+.map-container {
+  position: relative;
+}
+
+.heatmap-checkboxes {
+  position: absolute;
+  top: 3rem;
+  right: 4.6rem;
+  /* transform: translate(-50%, -50%); */
+  background-color: rgba(1, 78, 61, 0.9);
+  padding-left: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 250px;
+  height: 150px;
+  border-radius: 0;
+  z-index: 1000;
+  padding-top: 18px;
+}
+
+.heatmap-checkboxes label {
+  display: block; /* Each label takes up the full width */
+  margin: 15px 0;  /* Space between labels */
+  cursor: pointer; /* Indicate that the label is clickable */
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 5px;
+  color: #ffffff;
+ /* margin-top: 30px; */
+}
+
+.heatmap-checkboxes input[type="checkbox"] {
+  margin-left:40px;
+  color: #014e3d;
+  /* 添加以下样式来自定义勾选框的外观 */
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #E3FCF7;
+  position: relative;
+  outline: none;
+  border-radius: 0;
+  top:8px;
+}
+
+/* 自定义勾选框的选中状态样式 */
+.heatmap-checkboxes input[type="checkbox"]::before {
+  content: '\2713'; /* Unicode 编码表示勾号 */
+  color: #E3FCF7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  line-height: 1;
+  opacity: 0; /* 默认不显示 */
+}
+
+/* 当勾选框选中时显示勾号 */
+.heatmap-checkboxes input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+
+
+/* .heatmap-checkboxes .heatmaps-click {
+  cursor: pointer;
+}
+
+.heatmap-checkboxes .heatmaps-closed,
+.checkboxes-visibility.hidden {
+  display: none;
+} */
+
+.checkboxes-visibility {
+  transition: opacity 0.3s; /* Optional smooth transition */
+}
+
+.checkboxes-visibility.hidden {
+  opacity: 0; /* Hide the content */
+  pointer-events: none; /* Prevent any interaction */
+}
+
+
+.quietness-traffic-light{
+  margin-top: -25px;
+  margin-bottom: 5px;
+}
+
+.heatmap-web{
+
+  width: 2.8rem;
+  top: 0rem;
+  height: 2.8rem;
+  background-color:#014e3d;
+  right:5.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+}
+
+.heatmap-web:hover{
+
+  width: 2.8rem;
+  top: 0rem;
+  height: 2.8rem;
+  background-color:#00ed64;
+  right:5.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-2px); }
+  20% { transform: translateX(2px); }
+  30% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  50% { transform: translateX(-2px); }
+  60% { transform: translateX(2px); }
+  70% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+  90% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.6s;
+}

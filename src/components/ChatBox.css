@@ -1,0 +1,79 @@
+.ChatBox {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 0px solid #ccc;
+    border-radius: 0px;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.Amble, .Amble-clickable {
+    align-self: flex-start;
+    background-color: #ddd;
+    margin: 5px;
+    padding: 1px 8px 1px 8px;
+    border-radius: 5px;
+}
+
+.Me {
+    align-self: flex-end;
+    background-color: rgb(0, 146, 92);
+    margin: 5px;
+    padding: 1px 8px 1px 8px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.System, .System-clickable {
+    align-self: flex-end;
+    background-color: #014e3d;
+    margin: 5px;
+    padding: 1px 8px 1px 8px;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.icon {
+    width: 20px; /* adjust this to the size you want */
+    height: auto; /* maintains aspect ratio */
+}
+
+.acorn,
+.user {
+    float: right;
+}
+
+.squirrel {
+    float: left;
+}
+
+.message-container {
+    font-size: 0.9rem;
+    margin: 0px 0px 0px 0px;
+    font-weight: normal;
+    font-family: "Arial", sans-serif;
+}
+
+.Amble-clickable:hover {
+    cursor: pointer;
+    background-color: #ffe212; /* your desired hover color */
+}
+
+.System-clickable:hover {
+    cursor: pointer;
+    background-color: #10c25a; /* your desired hover color */
+}
+
+
+.AmbleTyping {
+    font-style: italic;
+    text-align: left;
+    font-size: 0.9rem;
+}

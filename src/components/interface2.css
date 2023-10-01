@@ -1,0 +1,423 @@
+#root {
+    /* max-width: 1280px; */
+    margin: 0 auto;
+    /* padding: 2rem; */
+    text-align: center;
+    justify-content: center;
+    /* width: 100rem;
+    height: 60rem; */
+    display: flex;
+    flex-direction: column;
+    /* min-width: 100px;
+    min-height: 100px; */
+  }
+  
+  
+  .card {
+    padding: 2em;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+  
+  body {
+    /* background: url(/static/images/newyork.jpg) no-repeat center fixed; */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+  
+  /* body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8); 
+    z-index: 0; 
+  } */
+  
+  .menubar-area-interface{
+    display: flex;
+    justify-content: center;
+    /* 在主轴上居中 */
+    align-items: center;
+    /* 在交叉轴上居中 */
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+
+  }
+  .mapwrapper_routeplan {
+    background-color: aliceblue;
+     width: 100%;
+     height: 100%;
+     margin: auto;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     opacity: 0.5;
+   }
+  
+  .PlanWin {
+    /* width: 80rem;
+    height: 50rem; */
+    /* width: 95rem;
+    height: 54rem; */
+    width: 92%;
+      height: 85%;
+      margin: auto;
+      position: absolute;
+      top: 54%;
+   
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 0.5px solid #000;  */
+    z-index: 3; 
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.3); 
+    overflow: hidden;
+  }
+  
+  
+  
+/*   
+  .PlanSet {
+    width: 40%;
+    height: 100%;
+    background-color: #ffffff;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+  
+  } */
+  
+  /* .Map {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  } */
+  
+  .PlanMap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* overflow: hidden; */
+  }
+  .green-bar {
+    background-color: #004d40;
+    height: 2.8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px; 
+    
+  }
+  
+  .text_bar {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: normal;
+    /* padding-left: 24px; */
+    margin-left: 24px;
+    font-family: "Comic Sans MS", cursive;
+  }
+  
+  .text_bar_2 {
+    color: #354648;
+    font-size: 0.9rem;
+    font-weight: normal;
+    /* padding-left: 24px; */
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .text_bar_2-preplan {
+    color: #354648;
+    font-size: 0.9rem;
+    font-weight: normal;
+    /* padding-left: 24px; */
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .text_bar_2-preplan-weatherwin {
+    color: #354648;
+    font-size: 0.9rem;
+    font-weight: normal;
+    /* padding-left: 24px; */
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .spacer1 {
+    width: 15px; /* 设置空格宽度 */
+    display: inline-block; /* 将元素作为行内块级元素显示 */
+  }
+  
+  .text_bar_3 {
+    color: #040404;
+    font-size: 1.2rem;
+    font-weight: normal;
+    /* padding-left: 24px; */
+    margin-left: 25px;
+    margin-right: 10px;
+    font-family: "Comic Sans MS", cursive;
+   
+  }
+  
+  .start-place,
+  .start-time,
+  .walk-duration,
+  .preference {
+    display: flex;
+    align-items: center;
+  }
+  
+  .start-place {
+    background-color: #ffffff;
+    height:3rem;
+    margin-top: 140px;
+    margin-bottom: 60px; 
+  
+  
+  }
+  
+  .start-time {
+    background-color: #ffffff;
+    height: 3rem;
+    margin-bottom: 60px; 
+  
+  }
+  
+  .walk-duration {
+    background-color: #ffffff;
+    height: 3rem;
+    margin-bottom: 60px;
+  }
+  
+  .preference {
+    background-color: #ffffff;
+    height: 3rem;
+    margin-bottom: 180px; 
+  }
+  
+  
+  .gain-route{
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(540%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .gainroute-button {
+    background-color: #004d40;
+    color: #CBDAC5;
+    border: none;
+    border-radius: 0;
+    padding: 15px 30px;
+    cursor: pointer;
+  }
+  
+  .additional-blocks {
+    position: absolute;
+    background-color: #dde87b;
+    top: 0;
+    right:0;
+    display: flex;
+    align-items: flex-start;
+    z-index: 2;
+  }
+
+  .additional-blocks-weather{
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    justify-content: end;
+    top: 0;
+    right:0;
+    display: flex;
+    z-index: 2;
+    animation: fadeIn 0.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+  }
+  
+  .additional-block-text-preplan-web {
+    width: 15rem;
+    height:2.8rem;
+    background-color:#e3fcf7;
+    right:8.4rem;
+    display: flex;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .additional-block-text-preplan-weatherwin {
+    width: 14rem;
+    height:2.8rem;
+    background-color: #e3fcf7;
+    left:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .additional-block-close-weather{
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: #014e3d;
+    left:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+    cursor: pointer;
+  }
+  
+  .additional-block-close {
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: #014e3d;
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .additional-block-weather {
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color:#014e3d;
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+ .additional-block-weather:hover{
+    background-color:#ffe212;
+  }
+
+  .additional-block-close:hover {
+    background-color:#ffc101;
+  }
+
+  .additional-block-close-weather:hover{
+    background-color:#ffc101;
+  }
+  
+  .close-button {
+    position: absolute;
+    margin: auto;
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+  }
+  
+  
+  .popup-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    height: 50%;
+    background-color: #ffffff;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    /* border: 1.5px solid #000;  */
+    /* overflow-y: auto; */
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 添加投影效果 */
+  }
+  
+  .w_current {
+    margin-top: 5%;
+    /* 设置 Flexbox 子项的弹性增长以适应剩余空间 */
+    flex: 1;
+    width: 100%;
+    /* 添加横向滚动条，以处理内容溢出 */
+    overflow-x: auto;
+    /* 禁用纵向滚动条 */
+    max-height: 100%; /* 或者根据需要设置具体的值 */
+  }
+  
+  .overlay-weatherwin{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85); /* 设置蒙版的颜色和透明度 */
+    z-index: 5;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .popup-overlay.hide,
+  .additional-blocks-weather.hide,
+  .additional-block-close-weather.hide, 
+  .w_current.hide,
+  .overlay-weatherwin.hide
+  {
+    animation: fadeOut 0.7s ease-in-out;
+    opacity: 0;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

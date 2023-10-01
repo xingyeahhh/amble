@@ -1,0 +1,64 @@
+.stand-icon{
+    justify-content: center;
+    align-items: center;
+    background-color:#014e3d ;
+    display: flex;
+    margin-bottom: 10px;
+    position: relative;
+    margin-top: 10px;
+    height: 5.5rem;
+    width: 5.5rem;
+    margin: auto;
+}
+
+
+
+
+.each-stop-inform {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* height: 300px; */
+    
+  }
+  
+  .stop-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 间距 */
+    width: 100%; /* 填充父容器的宽度 */
+  }
+  
+  .stop-info {
+    flex: 1; /* 均等分配空间 */
+    background-color:rgb(177, 240, 5, 0.3) ; 
+    min-width: 250px; /* 设置最小宽度，可以根据需要调整 */
+    max-width: 250px; /* 设置最大宽度，可以根据需要调整 */
+    padding: 10px; /* 内边距，可以根据需要调整 */
+    margin: 8px; /* 外边距，可以根据需要调整 */
+    padding-top: 38px;
+    height: 260px;
+  }
+  .rate-slider{
+    margin-top: -3px;
+  }
+
+  .park-name{
+    margin-top: -1px;
+    padding-bottom: 0px;
+  }
+
+  
+  .stop-name{
+  color: #00684a;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  .stop-info span.park-name {
+    display: inline-block;
+    max-width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

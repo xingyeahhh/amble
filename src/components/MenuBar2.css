@@ -1,0 +1,105 @@
+/* MenuBar2.css */
+.menubar2 {
+    background-color: #014e3d;
+    display: flex;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 5rem;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .Logo-amble {
+    width: 160px;
+    height: auto;
+    z-index: 0;
+    position: relative;
+    margin-bottom: 8px;
+  }
+
+  .logo-wrapper {
+    color: #e3fcf7;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 1rem; /* Set the distance from the left edge */
+    margin-top: 0.8rem;
+  }
+  
+  .menu-items {
+    display: flex;
+    gap: 30px;
+    margin-right: 2rem; /* Set the distance from the right edge */
+  }
+  
+  .menu-item {
+    font-weight: normal;
+    color: #e3fcf7;
+    font-size: 19px;
+    cursor: pointer;
+  }
+  
+  .menu-item:hover {
+    color: #b1ff05; /* Change to your desired hover color */
+  }
+  
+
+
+ 
+  .options-box-menubar2 {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(1, 78, 61, 0.9);
+    /* border: 1px solid #fdfffe; */
+    padding: 15px;
+    width: 140px; /* 调整选项框的宽度 */
+    height:180%;
+    z-index: 1;  
+    justify-content: center;
+  }
+  
+  .option-menubar2 {
+    display: block;
+    width: 100%; 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    outline: none; /* 移除默认的点击边框 */
+    transition: filter 0.3s; /* 添加过渡效果 */
+    border-radius: 0px;
+  }
+  .option-menubar2:focus {
+    outline: none;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+
+   /* 鼠标悬停效果 */
+   .option-menubar2:hover {
+    background-color: #b1ff05;
+    filter: brightness(0.9); /* 悬停时变暗 */
+    transition: filter 1s; /* 添加过渡效果 */
+    border-radius: 0px;
+
+  }
+
+  .option-text-menubar2{
+  font-size: 17px;
+  color: #e3fcf7;
+  }
+    .option-menubar2:hover .option-text-menubar2 {
+      /* Change the font color when the button is being hovered */
+      color: #014e3d;
+    }

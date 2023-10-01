@@ -1,0 +1,76 @@
+.title{
+    font-size: 0.9rem;
+    font-weight:700;
+
+}
+
+.daily-item{
+    background-color:#00ED64;
+    /* border: 1px solid #000;  */
+    border-radius: 2px;
+    height:40px;
+    margin:3px;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    font-size:14px;
+    padding:5px 20px;
+    /* overflow-y: auto; */
+}
+
+.icon-small{
+    width:45px;
+}
+
+.Date{
+    color:#212121;
+    flex:1 1;
+    font-weight:600;
+    margin-left:12px;
+}
+
+.weather-general{
+    flex:1 1;
+    margin-right:15px;
+    text-align: right;
+}
+
+.min-max{
+    color:#3e6852
+}
+
+.daily-details-grids{
+    grid-row-gap:0;
+    grid-column-gap:15px;
+    row-gap:0;
+    column-gap:15px;
+    display:grid;
+    flex:1 1;
+    grid-template-columns: auto auto;
+    padding:5px 15px;
+    background-color: #eeeeee;
+    overflow-y: auto;
+
+}
+
+.daily-details-grids-item{
+display:flex;
+height:30px;
+justify-content:space-between;
+align-items:center;
+overflow-y: auto;
+}
+
+.content{
+    color:#2a2a2a;
+    font-size: 0.8rem;
+    margin-left:12px;
+}
+
+.d-title{
+    color:#2a2a2a;
+    font-weight:600;
+    font-size: 0.8rem;
+    margin-left:12px;
+}
+

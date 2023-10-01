@@ -1,0 +1,258 @@
+/* resources.css */
+
+/* Extra CSS for the Resources Page */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.homepage-pics-container {
+  background-image: url('/static/images/newyork.jpg');
+  /* 设置背景图片路径 */
+  background-size: cover;
+  /* 按比例缩放背景图，保持其完全覆盖容器 */
+  background-position: center;
+  /* 调整背景图的位置为居中 */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* 设置高度为视口的100% */
+  display: flex;
+}
+
+.menubar-area {
+  display: flex;
+  justify-content: center;
+  /* 在主轴上居中 */
+  align-items: center;
+  /* 在交叉轴上居中 */
+  position: relative;
+  width: 100%;
+  height: 5rem;
+}
+
+.left-color-block {
+  background-color: rgb(1, 78, 61, 0.9);
+  width: 30%;
+  /* 设置色块宽度 */
+  height: 70%;
+  /* 与homepage-pics-container高度相同 */
+  position: relative;
+  left: 5.5%;
+  /* 将色块靠左 */
+  top: 9%;
+  overflow: hidden;
+}
+
+.hometext-title {
+  color: #e3fcf7;
+  width: 77%;
+  height: auto;
+  z-index: 0;
+  position: absolute;
+  margin-left: -38%;
+  /* 设置右侧的间距 */
+  margin-top: 10%;
+  text-align: left;
+}
+
+/* 颜色：#014e3d #00ed64 #e3fcf7 #001E2B #FFC010 #FFEEA9 #FFE212 #B1FF05 #00684A*/
+
+.home-button-container {
+  width: 100%;
+  height: 100%;
+  top: 32%;
+  left: 0%;
+  display: block;
+  position: relative;
+}
+
+.mapwrapper_landingpage {
+  background-color: #FFEEA9;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.mapwrapper_landingpage {
+  background-color: #ffffff;
+  width: 100%;
+  height: 1000px;
+  margin: auto;
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.rightbox {
+  left: 0%;
+  height: 97.5%;
+  width: 27%;
+  /* 调整leftbox的宽度，确保加上rightbox的宽度不超过100% */
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.hometext-address {
+  color: #e3fcf7;
+  width: 77%;
+  height: auto;
+  z-index: 0;
+  position: absolute;
+  margin-left: 12%;
+  /* 设置右侧的间距 */
+  margin-top: 10%;
+  text-align: left;
+}
+
+.rightbox-in-1 {
+  top: 0%;
+  margin-right: 1.5%;
+  background-color: #014e3d;
+  height: 35%;
+  width: 97.5%;
+  /* 调整leftbox的宽度，确保加上rightbox的宽度不超过100% */
+  display: flex;
+  position: relative;
+  margin-bottom: 2.5%;
+}
+
+.rightbox-in-2 {
+  top: 0;
+  margin-right: 1.5%;
+  height: 65%;
+  width: 97.5%;
+  /* 调整leftbox的宽度，确保加上rightbox的宽度不超过100% */
+  display: flex;
+  position: relative;
+  /* background-image: url('/static/images/newyork7.jpg'); */
+}
+
+/* .pic-in-rightbox {
+    width: 100%;
+    height: 100%;
+  }
+   */
+/* .leftbox {
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    height: 100%;
+    width: 73%; */
+/* 调整rightbox的宽度，确保加上leftbox的宽度不超过100% */
+/* display: flex;
+    position: relative;
+  } */
+
+
+
+.resource-area{
+  
+  background-color: #ffffff;
+  width: 100%;
+  height: 100vh;
+position: relative;
+align-content: center;
+justify-content: center;
+display: flex;
+align-items: center;
+
+padding-left: 8%;
+padding-right: 8%;
+}
+
+.r-b1{
+  background-size: cover;
+  /* 按比例缩放背景图，保持其完全覆盖容器 */
+  background-position: center;
+  /* 调整背景图的位置为居中 */
+  background-image: url('/static/images/newyork7.jpg');
+  width: 32%;
+  /* top:4rem; */
+  height: 50rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+}
+
+.r-b2{
+  background-size: cover;
+  /* 按比例缩放背景图，保持其完全覆盖容器 */
+  background-position: center;
+  /* 调整背景图的位置为居中 */
+  background-image: url('/static/images/newyork8.jpg');
+  width: 32%;
+  /* top:4rem; */
+  height: 50rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+}
+
+.r-b3{
+  background-size: cover;
+  /* 按比例缩放背景图，保持其完全覆盖容器 */
+  background-position: center;
+  /* 调整背景图的位置为居中 */
+  background-image: url('/static/images/newyork4.jpg');
+  width: 32%;
+  /* top:4rem; */
+  height: 50rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0%;
+}
+
+.additional-block-close-res{
+  top:0;
+  right:0;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: #014e3d;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.additional-block-close-res:hover{
+  background-color: #b1ff05;
+}
+
+
+.attribution-text{
+  display: flex;
+  position: absolute;
+  bottom:1px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #111212;
+}

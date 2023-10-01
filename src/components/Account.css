@@ -1,0 +1,53 @@
+.wrapper-function-logout{
+    position: fixed;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin-top: 10%;
+  }
+  
+  .wrapper-function-text-logout {
+    display: flex;
+    width: 120px;
+    height: 50px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #E3FCF7;
+    border: 1.5px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    justify-content: center;
+    align-items: center;
+    background: #00684A;
+  }
+  
+  .wrapper-function-text-logout span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .wrapper-function-text-logout:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #B1FF05;
+    transition: all .35s;
+  }
+  
+  .wrapper-function-text-logout:hover{
+    color: #00684A;
+  }
+  
+  .wrapper-function-text-logout:hover:after{
+    width: 100%;
+  }

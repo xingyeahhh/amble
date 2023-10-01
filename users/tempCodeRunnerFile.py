@@ -1,0 +1,6 @@
+        print(f"Visiting Park: {park_name}")
+        print(f"Busyness Rating: {park_busi}")
+        print(f"Pollution Level: {park_poll}")
+        print(f"Remaining Distance: {predefined_distance} km")
+        print(f"Location: ({park_latitude}, {park_longitude})")
+        print("-------------------------")

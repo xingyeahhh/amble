@@ -1,0 +1,207 @@
+- - - Mapbox Video Tutorial - - - 
+
+// const Map = () => {
+//   const [viewport, setViewport] = useState({
+//     latitude: 40.748333,
+//     longitude: -73.985278,
+//     width: "100px",
+//     height: "100px",
+//     zoom: 12.7
+//   });
+  
+//   const [selectedPark, setSelectedPark] = useState(null);
+
+//   useEffect(() => {
+//     const listener = e => {
+//       if (e.key === "Escape") {
+//         setSelectedPark(null);
+//       }
+//     };
+//     window.addEventListener("keydown", listener);
+
+//     return () => {
+//       window.removeEventListener("keydown", listener);
+//     };
+//   }, []);
+
+//   const mapboxApiKey = import.meta.env.VITE_MAPBOX_API_KEY;
+
+//   return (
+//     <div>
+//       <ReactMapGL
+//         {...viewport}
+//         mapboxAccessToken={mapboxApiKey}
+//         onViewportChange={viewport => {
+//           setViewport(viewport);
+//         }}
+//       >
+//         {parks.data.map(park => (
+//           <Marker
+//             key={park.id}
+//             latitude={park.location.latitude}
+//             longitude={park.location.longitude}
+//           >
+//             <button
+//               className="marker-btn"
+//               onClick={e => {
+//                 e.preventDefault();
+//                 setSelectedPark(park);
+//               }}
+//             >
+//               <img src="/static/scrat.png" alt="Acorn Icon" />
+//             </button>
+//           </Marker>
+//         ))}
+
+//         {selectedPark ? (
+//           <Popup
+//             latitude={selectedPark.location.latitude}
+//             longitude={selectedPark.location.longitude}
+//             onClose={() => {
+//               setSelectedPark(null);
+//             }}
+//           >
+//             <div>
+//               <h2>{selectedPark.name}</h2>
+//               <p>
+//                 {selectedPark.busi}
+//                 {selectedPark.poll}
+//               </p>
+//             </div>
+//           </Popup>
+//         ) : null}
+//       </ReactMapGL>
+//     </div>
+//   );
+// }
+
+// export default Map;
+
+- - - Google Maps - - - 
+
+// const Map = () => {
+//   const renderMarkers = (map, maps) => {
+//     const markers = Object.entries(parks).map(([id, park]) => ({
+//       id: id,
+//       lat: park.location.latitude,
+//       lng: park.location.longitude,
+//       name: park.name,
+//     }));
+
+//     markers.forEach((marker) => {
+//       const markerInstance = new maps.Marker({
+//         position: { lat: marker.lat, lng: marker.lng },
+//         map: map,
+//         title: marker.name,
+//       });
+
+//       markerInstance.addListener('click', () => {
+//         console.log('Marker clicked:', marker.id);
+//       });
+//     });
+//   };
+
+//   const apiIsLoaded = (map, maps) => {
+//     renderMarkers(map, maps);
+//   };
+
+//   useEffect(() => {
+//     // Call the renderMarkers function immediately
+//     const mapRef = document.querySelector('.google-map-react');
+//     if (mapRef) {
+//       const mapInstance = mapRef.getMap();
+//       const mapsInstance = mapRef.getMaps();
+//       if (mapInstance && mapsInstance) {
+//         renderMarkers(mapInstance, mapsInstance);
+//       }
+//     }
+//   }, []);
+
+//   return (
+//     <div style={{ height: '50rem', width: '60rem' }}>
+//       <GoogleMapReact
+//         bootstrapURLKeys={{ key: 'AIzaSyCaDJuOV60ZndmKjCNiUvY2M3BBMEVsUYc' }}
+//         defaultCenter={{
+//           lat: 40.748333,
+//           lng: -73.985278,
+//         }}
+//         defaultZoom={12.7}
+//         yesIWantToUseGoogleMapApiInternals
+//         onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
+//       />
+//     </div>
+//   );
+// };
+
+// export default Map;
+
+- - - Mapbox Docs (App) - - -
+// function App() {
+//   useEffect(() => {
+//     if (map.current) return; // initialize map only once
+//     map.current = new mapboxgl.Map({
+//     container: mapContainer.current,
+//     style: 'mapbox://styles/mapbox/streets-v12',
+//     center: [lng, lat],
+//     zoom: zoom
+//     });
+//     });
+
+//   const mapContainer = useRef(null);
+//   const map = useRef(null);
+//   const [lng, setLng] = useState(-70.9);
+//   const [lat, setLat] = useState(42.35);
+//   const [zoom, setZoom] = useState(9);
+
+//   return (
+//     <div>
+//       <div ref={mapContainer} className="map-container" />
+//     </div>
+//   );
+
+// }
+
+- - - Functional Map - - -
+import React, { useRef, useEffect, useState } from 'react';
+import parks from './parks.json';
+import "./Map.css";
+import 'mapbox-gl/dist/mapbox-gl.css';
+import ReactMapGL, {Marker, Popup } from 'mapbox-gl';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZmluYmFyYWxsYW4iLCJhIjoiY2xqY3NtYWN6MjV0ODNqcXhhaTY4aGQxdSJ9.VeVQzxCCtpyP_MeT1CkjOg';
+
+const Map = () => {
+    useEffect(() => {
+    if (map.current) return; // initialize map only once
+    map.current = new mapboxgl.Map({
+    container: mapContainer.current,
+    style: 'mapbox://styles/mapbox/streets-v12',
+    center: [lng, lat],
+    zoom: zoom
+    });
+      });
+
+  const mapContainer = useRef(null);
+  const map = useRef(null);
+  const [lat, setLat] = useState(40.727872);
+  const [lng, setLng] = useState(-73.993157);
+  const [zoom, setZoom] = useState(12.4);
+
+  return (
+    <div>
+      <div ref={mapContainer} className="map-container" />
+    </div>
+  );
+}
+
+export default Map;
+
+- - - Navigation Controls - - -
+    // map.current.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+
+    // const directions = new MapboxDirections({
+    //   accessToken: mapboxgl.accessToken,
+    //   unit: 'metric',
+    //   profile: 'mapbox/walking'
+    // });
+
+    // map.current.addControl(directions, 'bottom-left');

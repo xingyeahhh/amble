@@ -1,0 +1,11 @@
+{
+    "data_from_frontend": {
+        "selectedOptions": [
+            "library_locations",
+            "community_locations",
+            "museum_art_locations",
+            "worship_locations",
+            "walking_node_locations"
+        ]
+    }
+}

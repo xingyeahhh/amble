@@ -1,0 +1,157 @@
+.wrapper-function-gpt {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .wrapper-function-text-gpt{
+    display: flex;
+    width: 320px;
+    height: 50px;
+    line-height: 40px;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #E3FCF7;
+    border: 1.5px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    justify-content: center;
+    align-items: center;
+    background: #014e3d;
+  }
+  
+  .wrapper-function-text-gpt span {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .wrapper-function-text-gpt:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00ed64;
+    transition: all .35s;
+  }
+  
+  .wrapper-function-text-gpt:hover {
+    color: #014e3d;
+  }
+  
+  .wrapper-function-text-gpt:hover:after {
+    width: 100%;
+  }
+  
+
+  .gpt-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .select-area {
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .gpt-select{
+    top: 310px;
+    border-radius: 0;
+    opacity: 0.8;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 80%;
+    height: 45px;
+    cursor: pointer;
+    z-index: 100;
+    padding-left: 3px;
+    /* padding-right: 11px; */
+  }
+
+  .gpt-opt {
+    display: flex;
+    position: absolute;
+    font-size: 16px; /* 自定义字体大小 */
+    color: #014e3d;
+    background-color: rgba(255, 255, 255, 0.8); /* 初始透明度为0.8 */
+    transition: background-color 0.3s, opacity 0.3s; /* 添加过渡效果 */
+  }
+  
+  .gpt-opt:hover {
+    background-color: rgba(1, 78, 61, 0.5); /* 改变背景颜色，并降低透明度 */
+    opacity: 1; /* 悬停时完全不透明 */
+  }
+  .response-container{
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    background-color: RGB(1, 78, 61,0.7);
+    border-radius: 0;
+    padding: 27px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    animation: fadeIn 0.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+
+  .response-text{
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+     font-size: 1.1em;
+    font-family: 'Lobster', cursive;
+    color: #E3FCF7;
+    
+  }
+
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
+  .response-container.hide,
+  .response-text.hide
+  {
+    animation: fadeOut 0.7s ease-in-out;
+    opacity: 0;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

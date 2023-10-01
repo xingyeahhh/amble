@@ -1,0 +1,317 @@
+/* HomePage2.css */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+.homepage-pics-container {
+  background-size: cover;
+  background-position: center;
+  background-image: url('/static/images/newyork.jpg');
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  transition: background-image 2.5s ease; /* Add transition property */
+}
+
+.homepage-pics-container.hovered {
+  background-image: url('/static/images/newyork1.3.jpg');
+}
+
+
+
+
+.menubar-area {
+  display: flex;
+  justify-content: center;
+  /* 在主轴上居中 */
+  align-items: center;
+  /* 在交叉轴上居中 */
+  position: relative;
+  width: 100%;
+  height: 5rem;
+}
+
+.left-color-block {
+  background-color: rgb(1, 78, 61, 0.9);
+  width: 30%;
+  /* 设置色块宽度 */
+  height: 65%;
+  /* 与homepage-pics-container高度相同 */
+  position: relative;
+  /* 将色块靠左 */
+  top: 5.5rem;
+  left: 5.5rem;
+  overflow: hidden;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+.hometext-title {
+  display: flex;
+  color: #e3fcf7;
+  width: 100%;
+  padding-left: 27%;
+  top: 2%;
+  z-index: 1;
+  position: relative;
+ /* height: 25rem; */
+  text-align: left;
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin-bottom: 35px;
+  flex-direction: column;
+  /* overflow: hidden; */
+}
+
+.hometext-body {
+  position: relative;
+  display: flex;
+  color: #e3fcf7;
+  width: 84%;
+  height: 70rem;
+  z-index: 0;
+  overflow: hidden;
+  /* 设置右侧的间距 */
+  top: 0rem;
+  text-align: left;
+  /* align-items: center; */
+  justify-content: center;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+/* 颜色：#014e3d #00ed64 #e3fcf7 #001E2B #FFC010 #FFEEA9 #FFE212 #B1FF05 #00684A*/
+
+.home-button-container {
+  width: 100%;
+  height: 100%;
+  top: -0.1rem;
+  /* left: 0%; */
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  position: relative;
+
+}
+
+
+  /* .mapwrapper_landingpage {
+    background-color: #FFEEA9;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  } */
+
+.mapwrapper_landingpage {
+  background-color: #ffffff;
+  width: 100%;
+  /* height: 1000px; */
+  height: 100vh;
+  margin: auto;
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.rightbox {
+  left: 0%;
+
+  height: 97.5%;
+  width: 27%;
+  /* 调整leftbox的宽度，确保加上rightbox的宽度不超过100% */
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+}
+
+.hometext-address {
+
+  color: #e3fcf7;
+  width: 77%;
+  height: auto;
+  z-index: 0;
+  position: absolute;
+  margin-left: 12%;
+  /* 设置右侧的间距 */
+  margin-top: 10%;
+  text-align: left;
+}
+
+.rightbox-in-1 {
+  top: 0%;
+  margin-right: 1.5%;
+  background-color: #014e3d;
+  height: 35%;
+  width: 97.5%;
+  /* 调整leftbox的宽度，确保加上rightbox的宽度不超过100% */
+  display: flex;
+  position: relative;
+  margin-bottom: 2.5%;
+}
+
+.rightbox-in-2 {
+  top: 0;
+  margin-right: 1.5%;
+  height: 65%;
+  width: 97.5%;
+  /* 调整leftbox的宽度，确保加上rightbox的宽度不超过100% */
+  display: flex;
+  position: relative;
+  /* background-image: url('/static/images/newyork7.jpg'); */
+}
+
+.pic-in-rightbox {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 保持纵横比并覆盖容器 */
+  max-width: 100%;
+  max-height: 100%;
+  /* animation: fadeInOut 9s ease-in-out infinite; */
+}
+
+/* @keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  25%, 75% {
+    opacity: 1;
+  }
+} */
+
+.leftbox {
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  height: 100%;
+  width: 73%;
+  /* 调整rightbox的宽度，确保加上leftbox的宽度不超过100% */
+  display: flex;
+  position: relative;
+    
+}
+
+  .resources-pics-container {
+    background-color: rgb(237, 240, 237);
+    background-size: cover; /* 按比例缩放背景图，保持其完全覆盖容器 */
+    background-position: center; /* 调整背景图的位置为居中 */
+    /* position: relative; */
+    width: 100%;
+    height: 100vh; /* 设置高度为视口的100% */
+    display: flex;
+  }
+
+
+  .endbar {
+    background-color: #014e3d;
+    display: flex;
+    position: relative;
+    /* bottom: 0; */
+    align-items: center;
+    justify-content: center;
+    height: 28rem;
+    width: 100%;
+    z-index: 1;
+    text-align: left;
+    flex-direction: column;
+  }
+
+
+  .endbartitle{
+    left: 2rem;
+    top:3rem;
+    display: flex;
+    position:absolute;
+    margin-bottom: 10px; /* 下方间距 */
+  }
+  
+  /* 内容容器 */
+.endbarcontent {
+  display: flex;
+  position: absolute;
+  top:9.4rem;
+  justify-content: center;
+  width: 100%;
+}
+
+/* 内容块样式 */
+.endbarone,
+.endbartwo,
+.endbarthree {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 0 90px; /* 左右间距 */
+}
+
+/* 人员信息样式 */
+.endbarone span,
+.endbartwo span,
+.endbarthree span {
+  font-size: 18px;
+  color: #e3fcf7;
+  margin: 3px 0; /* 上下间距 */
+}
+
+.G,.N,.F,.Y,.C,.D{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 20px;
+}
+
+.profile-image-one,.profile-image-two,.profile-image-three,.profile-image-four,.profile-image-five,.profile-image-six {
+  width: 60px; /* 调整图片宽度 */
+  height: 60px; /* 调整图片高度 */
+  overflow: hidden;
+  border-radius: 50%; /* 将图片剪裁为圆形 */
+  margin-right: 10px; /* 调整图片与文字的间距 */
+  margin-top: 23px;
+}
+
+.profile-image-one img,.profile-image-two img ,.profile-image-three img,.profile-image-four img,.profile-image-five img,.profile-image-six img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.person-info-one,.person-info-two,.person-info-three,.person-info-four,.person-info-five,.person-info-six {
+  display: flex;
+  align-items: center;
+  
+}
+
+.gary {
+  margin-right: 5px; /* 调整图标与邮箱地址的间距 */
+}
+
+
+  .landing-page-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .guidebutton{
+    display: flex;
+    position: absolute;
+    right: 1%;
+    bottom: 10%;
+  }
+
+  

@@ -1,0 +1,25 @@
+Summary of Node Selection based on user preferences.
+
+1. park_locations.json = basedata (approx 380 nodes)
+
+2. park_node_locations.json added to base data (approx another 320 nodes). base data is always present
+
+3. userpref.jsx (from front end) produces a file = preferences.json
+
+4. this file is used to produce a nodes_final.json file.  if all other nodes are chosen = approx 2,500 nodes
+
+
+In addition there is a separate script (create_allnodes_to_db.py )that produces 
+
+5. a file all_nodes.json - with all the 2,500 nodes (whether they were selected by user or not)
+
+6. This data is sent to our database should anyone want to access data from the db
+
+7.  There is no functionality at present for doing this (but the data is there)
+
+Apart form park_locations.json and park_node_locations.json, the other node json files are:
+  "library_locations",
+  "community_locations",
+  "museum_art_locations",
+  "worship_locations",
+  "walking_node_locations",

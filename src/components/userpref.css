@@ -1,0 +1,33 @@
+.preferences-area {
+    width: 100vw;
+    height: 100vh;
+    background: #f7f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.login-area {
+    width: 100vw;
+    height: 100vh;
+    background: #f7f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.submit-button {
+    background-color: #004d40;
+    color: #CBDAC5;
+    border: none;
+    border-radius: 0;
+    padding: 15px 30px;
+    cursor: pointer;
+    margin-top: 2rem;
+  }

@@ -1,0 +1,74 @@
+.mobilehomepage-contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* To center-align text within mobile-hometext */
+  height: 100vh; /* Adjust the height as needed */
+  width: 100%;
+  position: relative;
+}
+
+.Logo-amble-mobile {
+  /* Add any styling you need for the logo */
+  position: relative;
+  display: flex;
+  width: 290px;
+    height: auto;
+    z-index: 0;
+  top: -95px;
+}
+
+.mobile-hometext {
+  /* Add any styling you need for the text container */
+  position: relative;
+  display: flex;
+  top: -95px;
+  color: #e3fcf7;
+ 
+  
+}
+
+/* Add styles for MyButton as needed */
+
+.mobile-homebut{
+  position: relative;
+  display: flex;
+  top: -50px;
+}
+
+
+.mobilehomepage-pics-container {
+  /* background-image: url('/static/images/newyork11.png');
+  background-image: url('/static/images/newyork5.jpg');
+  background-image: url('/static/images/newyork3.jpg'); */
+  /* 设置背景图片路径 */
+  background-size: cover;
+  /* 按比例缩放背景图，保持其完全覆盖容器 */
+  background-position: center;
+  /* 调整背景图的位置为居中 */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* 设置高度为视口的100% */
+  display: flex;
+  animation: backgroundSlide 40s infinite; /* 10秒切换一次，无限循环 */
+}
+
+@keyframes backgroundSlide {
+  0% {
+    background-image: url('/static/images/newyork11.png');
+  }
+  25% {
+    background-image: url('/static/images/newyork5.jpg');
+  }
+  50% {
+    background-image: url('/static/images/newyork3.jpg');
+  }
+  75% {
+    background-image: url('/static/images/newyork17.jpg');
+  }
+  100% {
+    background-image: url('/static/images/newyork11.png'); /* Loop back to the first image */
+  }
+}

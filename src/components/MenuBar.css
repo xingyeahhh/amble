@@ -1,0 +1,415 @@
+
+.menubar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  .menu-button-wrapper {
+      position: absolute;
+      top: 0.8rem;
+      left: 0.8rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      background-color: #014e3d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      opacity: 1;
+      /* opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+      animation-delay: 0.3s; */
+      cursor: pointer;
+    
+  }
+  
+  .profile-button-wrapper {
+    position: absolute;
+    top: 0.8rem;
+    left: 4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: #014e3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+    /* opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s; */
+    cursor: pointer;
+  
+  }
+  
+  
+  /* .history-button-wrapper {
+    position: absolute;
+    top: 0.8rem;
+    left: 3.6rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: #001E2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+    cursor: pointer;
+  
+  } */
+  
+  .favorite-button-wrapper {
+    position: absolute;
+    top: 0.1rem;
+    left: 9.7rem;
+    cursor: pointer;
+  
+  }
+  
+  
+  .profile-button:active {
+    filter: brightness(0.8); /* 点击时变暗 */
+  }
+  
+  /* 鼠标悬停效果 */
+  .option:hover {
+    background-color: #00ed64;
+    filter: brightness(0.9); /* 悬停时变暗 */
+    transition: filter 1s; /* 添加过渡效果 */
+    border-radius: 2px;
+  }
+  .options-box {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #00684a;
+   
+    padding: 9px;
+    width: 120px; /* 调整选项框的宽度 */
+    z-index: 2;  
+    opacity: 0.8;
+    z-index: 100;
+  }
+  
+  .option {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    outline: none; /* 移除默认的点击边框 */
+    transition: filter 0.3s; /* 添加过渡效果 */
+    border-radius: 2px;
+    z-index: 100;
+  }
+  .option:focus {
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+  }
+  /* .option-text{
+  
+  } */
+
+ 
+  
+  .menu-bar {
+    background: url(/static/images/MenuPic5.jpg) no-repeat center fixed;
+    background-size: cover;
+    position: absolute;
+    /* bottom:0; */
+    display: flex;
+    flex-direction: column;
+    /* background-color: #7affcccb; */
+    border: 1.5px solid #000000;
+    border-radius: 0px 0px 0px 0px; /* 上左 上右 下右 下左 */
+    padding-top: 2%;
+    padding-left: 23%;
+    padding-right: 23%;
+    padding-bottom: 2%;
+    width: 60%; /* 调整选项框的宽度 */
+    height:70%;
+    z-index: 2;
+    margin: auto;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+    margin: auto;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+
+  
+  .option-bottom-menu {
+    display: block;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    outline: none; /* 移除默认的点击边框 */
+    transition: filter 0.3s; /* 添加过渡效果 */
+    border-radius: 2px;
+  }
+  
+  .option-bottom-menu:focus {
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+  }
+  
+  /* 鼠标悬停效果 */
+  .option-bottom-menu:hover {
+    background-color: #ffeea9;
+    filter: brightness(0.9); /* 悬停时变暗 */
+    transition: filter 1s; /* 添加过渡效果 */
+    border-radius: 2px;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 255, 253, 0.93); /* 设置蒙版的颜色和透明度 */
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .overlay-Reg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 255, 253, 0.93); /* 设置蒙版的颜色和透明度 */
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .additional-blocks-menubar {
+    position: absolute;
+    background-color: #dde87b;
+    width: 12.8rem;
+    top: 0;
+    right:0;
+    display: flex;
+    align-items: flex-start;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .additional-block-text-menubar{
+    width: 10rem;
+    height:2.8rem;
+    background-color: #e3fcf7;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .text_bar_2-menubar {
+    color: #354648;
+    font-size: 0.9rem;
+    font-weight: normal;
+    /* padding-left: 24px; */
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .additional-blocks-Reg {
+    position: absolute;
+    background-color: #dde87b;
+    width: 12.8rem;
+    top: 0;
+    right:0;
+    display: flex;
+    align-items: flex-start;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .additional-block-text-Reg{
+    width: 10rem;
+    height:2.8rem;
+    background-color: #e3fcf7;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .text_bar_2-Reg {
+    color: #354648;
+    font-size: 0.9rem;
+    font-weight: normal;
+    /* padding-left: 24px; */
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .additional-block-close-menubar {
+    position: absolute;
+    right: 0rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: #004d40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+    cursor: pointer;
+  }
+
+  .additional-block-close-Reg-menu{
+    position: absolute;
+    right: 0rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: #004d40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+    cursor: pointer;
+  }
+  
+  .additional-block-close-menubar.hide,
+  .overlay.hide,
+  .menu-bar.hide, 
+  .additional-blocks-menubar.hide,
+  .additional-block-text-menubar.hide,
+  .additional-block-close-Reg-menu.hide,
+  .overlay-Reg.hide,
+  .Reg-menu.hide,
+  .additional-blocks-Reg.hide,
+  .additional-block-text-Reg.hide
+  {
+    animation: fadeOut 0.7s ease-in-out;
+    opacity: 0;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .option-text{
+color: #ffffff;
+  }
+
+  /* 鼠标悬停效果 */
+  .option:hover {
+    background-color: #00ed64;
+    filter: brightness(0.9); /* 悬停时变暗 */
+    transition: filter 1s; /* 添加过渡效果 */
+    border-radius: 2px;
+  }
+  .options-homebox {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #00684a;
+    
+    padding: 9px;
+    width: 180px; /* 调整选项框的宽度 */
+    z-index: 2;  
+    opacity: 0.8;
+    z-index: 100;
+  
+  }
+  
+  .option {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    outline: none; /* 移除默认的点击边框 */
+    transition: filter 0.3s; /* 添加过渡效果 */
+    border-radius: 2px;
+    z-index: 100;
+  }
+  .option:focus {
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+  }
+  /* .option-text{
+  
+  } */
+  
+  
+  
+  
+  
+  
