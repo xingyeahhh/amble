@@ -116,6 +116,7 @@ Extensive feature analysis was also carried out on the Citi Bike model and it fo
 
 The combined busyness scores were calculated from taxi and Citi Bike models. The predictions from the taxi model are giving a higher weight in this calculation based on the difference in MAE between the two models. The seasonal trends of the taxi and Citi Bike data differ from each other (see Fig. 2), therefore, combining them results in a more robust and comprehensive busyness score. Once the combined busyness score is obtained, it is used together with crime scores within the app's routing algorithm to identify optimal routing nodes.
 
+![image](https://github.com/xingyeahhh/amble/assets/123461462/61a386c5-711c-4a08-ab72-271f34284a1a)
 ![image](https://github.com/xingyeahhh/amble/assets/123461462/3e01d2e9-54e6-4cd7-b838-e5b18e269615)
 
 
