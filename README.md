@@ -13,4 +13,5 @@ The meeting schedule consisted of Daily Scrums, which involved updates from the 
 
 #### B.Backend
 The system architecture of the application is displayed in the figure 1 above (with a detailed version in Appendix E), highlighting the technologies implemented and interaction between \textit{amble's} different systems.
-![image](https://github.com/xingyeahhh/amble/assets/123461462/d81ca9dd-6161-4dc7-aafd-385451d9377b)
+![image](https://github.com/xingyeahhh/amble/assets/123461462/83ad81d4-5153-4228-8835-e617e94ec9fe)
+
